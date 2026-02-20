@@ -1,9 +1,8 @@
 ARRAYS UNIDIMENSIONAIS EM JAVA
 
-Os arrays unidemensionais sã os que possuem apemas um indice pra acessa seu conteudo
-  eles são declarads da seguinte forma:
-Tipo de dado[] Nome do array = New tipo-de-dado [QUANTIDADE]
+Os arrays unidemensionais sã os que possuem apemas um indice pra acessa seu conteudo eles são declarads da seguinte forma:
 
+Tipo de dado[] Nome do array = New tipo-de-dado [QUANTIDADE]
 Tipo de dado - Pode ser qualuer tipo de variável
 Nome do array - um nome válido; as mesmas regras para nome de variáveis
 Quantidade - Quantidade de elementos que o array pode manipular.
@@ -16,3 +15,28 @@ Double[] Preços = Newdouble [S]; Criaum array com o nome precos que contem 5 el
 CHAR [] Sexo = New char [2]; Cria um arraycom o nome sexo que contém 2 elementos do tipo char e seu índice varia entre 0 e 1.
 
 String [] Meses = New String [12]; Cria um array com o nome meses que contem 12 elementos do tipo string e seu índice varia de 0 a 11.
+
+
+ARRAYS BIDIMENSIONAIS EM JAVA
+
+  Um array bidimensional possui dois indices e possibilita que os valores sejam armazenados na forma de matrizes.
+A linguagem java não suporta arrays bidimenioais como as outras Linguagens (No formato linha, coluna, por exemplo), entretando é possivel obter a mesma funcionalidade criando um array de arrays.
+Os de uso mais comun são os qu envolvem dois arrays, mas é possivel criar arrays com quantas dimensoes forem necessárias. Esses Arrays devem ser declarados da seguinte forma.
+
+TIPO-DO-DADO    NOME DO ARRAY [][]=NEW    TIPO-DO-DADO [<índice1>] [<índice2>]
+
+ARRAY (VETOR) EM PYTHON
+
+Em python, o conceito de array (vetor) pode ser implementado de algumas formas sendo a mais comum o uso d listas (nativas) ou atraves da Biblioteca numpy para operações de alta performance.
+
+1 LISTA PYTHON (O JEITO PADRÃO)
+As listas em python funcoina como arrays dinamicos, o que significa que podemos armarzenar ipos de dads e mudar o tamanho automaticamente.
+
+2 NUMPY ARRAY (OJEITO MATEMÁTICO)
+
+Para manipulação de grandes volumes de dados ov calculos matemáticos (data science), usa-se a biblioteca numpy que fornece arrays mais eficients.
+Principais diferenças:
+- LISTAS: Dinamicas, aceitam tipo mistos (Inteiros, sting, etc)
+- NUMPY ARRAYS: Tem tamanho Fixo, Mas são otimizados para operações numéricas e exigem que os dados sejam do mesmo tipo.
+
+
