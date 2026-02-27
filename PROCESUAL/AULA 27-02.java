@@ -1,5 +1,3 @@
-AREARETANGULO
-
 import java.util.Scanner;
 
 /**
@@ -44,6 +42,7 @@ public class AreaRetangulo {
         System.out.println("Base: " + base);
         System.out.println("Altura: " + altura);
         System.out.println("Área: " + area);
+            
 
         // Fecha o Scanner para liberar recursos
         input.close();
