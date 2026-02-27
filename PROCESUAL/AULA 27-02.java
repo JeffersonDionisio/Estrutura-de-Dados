@@ -1,4 +1,4 @@
-AREA RETANGULO
+AREARETANGULO
 
 import java.util.Scanner;
 
