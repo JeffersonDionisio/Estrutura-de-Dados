@@ -1,1 +1,27 @@
 
+O texto mostra que o maior problema hoje na análise de dados é o volume absurdo de informação sendo gerado o tempo todo. Isso exige estruturas e tecnologias que consigam armazenar, processar e organizar esses dados, tipo sistemas distribuídos (Hadoop, Spark) e Data Lakes.
+
+Dá pra identificar dois tipos principais de dados:
+
+Estruturados: organizados em tabelas (tipo banco SQL), mais fáceis de trabalhar.
+Não estruturados: textos, imagens, vídeos, que precisam de IA e machine learning pra extrair valor.
+
+Também aparece muito a questão de integração de dados, porque as empresas têm várias fontes (CRM, ERP, IoT), e isso cria os chamados “silos de dados”. Aí entram processos como ETL e uso de APIs pra juntar tudo.
+
+Outro ponto forte é a qualidade dos dados, porque não adianta ter volume se os dados estão errados ou incompletos. Isso leva à necessidade de limpeza, validação e padronização — basicamente tratamento de dados antes da análise.
+
+A parte de governança de dados mostra a importância de ter regras bem definidas: quem pode acessar, como proteger, como armazenar. Aqui entram coisas como controle de acesso, criptografia e leis tipo LGPD.
+
+No futuro, o texto destaca muito o uso de:
+
+Inteligência Artificial e Machine Learning → pra prever padrões e automatizar análise
+Automação (RPA, AutoML) → pra reduzir trabalho manual
+Processamento em tempo real → decisões rápidas (tipo e-commerce e bancos)
+
+Mas também levanta problemas:
+
+dificuldade de explicar decisões da IA (caixa-preta)
+risco de viés nos dados
+questões de segurança e privacidade
+
+Resumindo: hoje a análise de dados depende de boas estruturas pra armazenar, integrar e processar dados (estruturados e não estruturados), com foco em qualidade, governança e uso crescente de IA e automação.
