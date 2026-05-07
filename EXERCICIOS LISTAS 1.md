@@ -1,4 +1,4 @@
-
+Exercícios sobre Listas em Java
 Exercício 1 (Fácil) - Lista de Cores
 Crie uma lista (ArrayList) de 5 cores e exiba todas usando o laço for-each.
 
@@ -144,4 +144,3 @@ Dica	Explicação
 📌 Teste cada operação	Execute o programa após cada nova funcionalidade
 📌 Use print para debug	Use System.out.println() para ver o que está acontecendo
 📌 Consulte os métodos	add(), get(), remove(), size(), isEmpty(), contains(), indexOf()
-
