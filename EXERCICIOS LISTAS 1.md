@@ -12,6 +12,28 @@ Crie uma lista (`ArrayList`) de 5 cores e exiba todas usando o laço `for-each`.
 3. Adicionar 5 cores diferentes
 4. Exibir todas as cores usando `for (String cor : cores)`
 
+Resposta:
+
+import java.ultil.Array.list;
+
+public class Main {
+    public static void main (String[] args){
+
+        ArrayList<String> cores = new ArrayList<>():
+
+        cores.add("Azul");
+        cores.add("Verde");
+        cores.add("Vermelho");
+        cores.add("Preto");
+        cores.add("Branco");
+
+        for (String cor : cores) {
+            System.out.printIn(cor);
+        }
+    }
+}
+    
+
 ---
 
 ## Exercício 2 (Fácil) - Soma de Números
