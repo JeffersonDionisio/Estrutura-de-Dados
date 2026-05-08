@@ -49,6 +49,26 @@ Crie um programa que adiciona os números de 1 a 10 em uma lista e depois calcul
 3. Calcular a soma percorrendo a lista
 4. Exibir: `"A soma dos números é: X"`
 
+Resposta:
+
+    import java.util.ArrayList;
+
+    public class Main {
+
+        public static void main(String[] args) {
+            ArrayList<Interager> numeros = new ArrayList <>();
+            for (int i = 1; i <=10;i++) {
+            numeros.add(i);
+        }
+        int soma = 0;
+
+        for (int numero : numero) {
+            soma += numero;
+        }
+        System.out.printin("A soma dos números e:" +soma);
+        }
+    }
+
 ---
 
 ## Exercício 3 (Médio) - Cadastro até "fim"
@@ -62,6 +82,34 @@ Faça um programa que recebe nomes do usuário (via `Scanner`) até que ele digi
 4. Caso contrário, adicionar o nome à lista
 5. Após sair, exibir todos os nomes (um por linha)
 
+Resposta:
+
+    import java.util.ArrayList;
+    import java.util.Scanner;
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+            ArrayList<String> nomes = new ArrayList<>();
+            Scanner sc = new Scanner(System.in);
+            while (true) {
+                System.out.print("Digite um nome (ou 'fim' para sair): ");
+                String nome = sc.nextLine();
+                if (nome.equals("fim")) {
+                    break;
+                }
+                nomes.add(nome);
+            }
+            System.out.println("\nNomes cadastrados:");
+
+            for (String nome : nomes) {
+                System.out.println(nome);
+            }
+
+            sc.close();
+        }
+    }
 ---
 
 ## Exercício 4 (Médio) - Removendo números pequenos
@@ -82,7 +130,39 @@ for (int i = lista.size() - 1; i >= 0; i--) {
     }
 }
 ```
+Resposta:
 
+    import java.util.ArrayList;
+
+    public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<Integer> numeros = new ArrayList<>();
+
+        numeros.add(5);
+        numeros.add(15);
+        numeros.add(3);
+        numeros.add(20);
+        numeros.add(8);
+        numeros.add(25);
+        numeros.add(2);
+        numeros.add(30);
+
+        System.out.println("Lista original:");
+        System.out.println(numeros);
+
+        for (int i = numeros.size() - 1; i >= 0; i--) {
+
+            if (numeros.get(i) < 10) {
+                numeros.remove(i);
+            }
+        }
+
+        System.out.println("Lista após remoção:");
+        System.out.println(numeros);
+    }
+    }
 ---
 
 ## Exercício 5 (Médio/Difícil) - Cadastro de Produtos
@@ -100,6 +180,43 @@ Faça um cadastro de produtos com **nome** e **preço**. Depois calcule o valor 
    - ...
    - Total: R$ [soma]
 
+Resposta:
+
+    import java.util.ArrayList;
+
+    public class Main {
+
+    public static void main(String[] args) {
+
+        ArrayList<String> produtos = new ArrayList<>();
+        ArrayList<Double> precos = new ArrayList<>();
+
+        produtos.add("Arroz");
+        precos.add(25.90);
+
+        produtos.add("Feijão");
+        precos.add(12.50);
+
+        produtos.add("Macarrão");
+        precos.add(8.75);
+
+        double total = 0;
+
+        for (int i = 0; i < produtos.size(); i++) {
+
+            System.out.println(
+                "Produto " + (i + 1) + ": "
+                + produtos.get(i)
+                + " - R$ "
+                + precos.get(i)
+            );
+
+            total += precos.get(i);
+        }
+
+        System.out.println("Total: R$ " + total);
+    }
+    }
 ---
 
 ## Exercício 6 (Difícil) - Agenda de Contatos
@@ -131,6 +248,130 @@ Crie uma agenda de contatos onde cada contato tem **nome** e **telefone**. Permi
 5 - Sair
 Escolha: _
 ```
+
+    import java.util.ArrayList;
+    import java.util.Scanner;
+
+    public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> nomes = new ArrayList<>();
+        ArrayList<String> telefones = new ArrayList<>();
+
+        int opcao;
+
+        do {
+
+            System.out.println("\n--- AGENDA DE CONTATOS ---");
+            System.out.println("1 - Adicionar contato");
+            System.out.println("2 - Buscar contato");
+            System.out.println("3 - Remover contato");
+            System.out.println("4 - Listar todos");
+            System.out.println("5 - Sair");
+            System.out.print("Escolha: ");
+
+            opcao = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcao) {
+
+                case 1:
+
+                    System.out.print("Nome: ");
+                    String nome = sc.nextLine();
+
+                    System.out.print("Telefone: ");
+                    String telefone = sc.nextLine();
+
+                    nomes.add(nome);
+                    telefones.add(telefone);
+
+                    System.out.println("Contato adicionado.");
+                    break;
+
+                case 2:
+
+                    System.out.print("Digite o nome: ");
+                    String busca = sc.nextLine();
+
+                    boolean encontrado = false;
+
+                    for (int i = 0; i < nomes.size(); i++) {
+
+                        if (nomes.get(i).equalsIgnoreCase(busca)) {
+
+                            System.out.println("Telefone: " + telefones.get(i));
+                            encontrado = true;
+                            break;
+                        }
+                    }
+
+                    if (!encontrado) {
+                        System.out.println("Contato não encontrado.");
+                    }
+
+                    break;
+
+                case 3:
+
+                    System.out.print("Digite o nome para remover: ");
+                    String remover = sc.nextLine();
+
+                    boolean removido = false;
+
+                    for (int i = 0; i < nomes.size(); i++) {
+
+                        if (nomes.get(i).equalsIgnoreCase(remover)) {
+
+                            nomes.remove(i);
+                            telefones.remove(i);
+
+                            System.out.println("Contato removido.");
+                            removido = true;
+                            break;
+                        }
+                    }
+
+                    if (!removido) {
+                        System.out.println("Contato não encontrado.");
+                    }
+
+                    break;
+
+                case 4:
+
+                    System.out.println("\n--- CONTATOS ---");
+
+                    for (int i = 0; i < nomes.size(); i++) {
+
+                        System.out.println(
+                            (i + 1) + " - "
+                            + nomes.get(i)
+                            + " - "
+                            + telefones.get(i)
+                        );
+                    }
+
+                    break;
+
+                case 5:
+
+                    System.out.println("Encerrando...");
+                    break;
+
+                default:
+
+                    System.out.println("Opção inválida.");
+            }
+
+        } while (opcao != 5);
+
+        sc.close();
+    }
+    }
 
 ---
 
